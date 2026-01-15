@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de Emissão de CO2</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="calculator">
+
+  <header class="calculator__header">
+    <h1 class="calculator__title">🌍 Calculadora de Emissão de CO₂</h1>
+    <p class="calculator__subtitle">Calcule as emissões estimadas de CO₂ para um determinado trajeto.</p>
+  </header>
+
+  <main class="calculator__main">
+    <form id="calculator-form" class="calculator__form" novalidate>
+      <fieldset class="calculator__fieldset">
+        <legend class="calculator__legend">Trajeto</legend>
+
+        <div class="calculator__field calculator__field--origin">
+          <label for="origin" class="calculator__label">Origem</label>
+          <input id="origin" name="origin" class="calculator__input" type="text" list="cities-list" autocomplete="off" required />
+          <datalist id="cities-list">
+            <!-- Será populado dinamicamente via JavaScript -->
+          </datalist>
+        </div>
+
+        <div class="calculator__field calculator__field--destination">
+          <label for="destination" class="calculator__label">Destino</label>
+          <input id="destination" name="destination" class="calculator__input" type="text" list="cities-list" autocomplete="off" required />
+        </div>
+
+        <div class="calculator__field calculator__field--distance">
+          <label for="distance" class="calculator__label">Distância (km)</label>
+          <input id="distance" name="distance" class="calculator__input calculator__input--number" type="number" readonly aria-describedby="distance-help" />
+          <p id="distance-help" class="calculator__help calculator__help--distance">A distância será preenchida automaticamente</p>
+          <div class="calculator__manual-toggle">
+            <input id="manual-distance" class="calculator__checkbox" type="checkbox" />
+            <label for="manual-distance" class="calculator__label--checkbox">inserir distância manualmente</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="calculator__fieldset">
+        <legend class="calculator__legend">Modo de Transporte</legend>
+
+        <div class="calculator__transport-grid">
+          <label class="calculator__transport-option">
+            <input type="radio" name="transport" value="bicycle" class="calculator__transport-input" id="transport-bicycle" />
+            <span class="calculator__transport-icon">🚲</span>
+            <span class="calculator__transport-text">Bicicleta</span>
+          </label>
+
+          <label class="calculator__transport-option">
+            <input type="radio" name="transport" value="car" class="calculator__transport-input" id="transport-car" checked />
+            <span class="calculator__transport-icon">🚗</span>
+            <span class="calculator__transport-text">Carro</span>
+          </label>
+
+          <label class="calculator__transport-option">
+            <input type="radio" name="transport" value="bus" class="calculator__transport-input" id="transport-bus" />
+            <span class="calculator__transport-icon">🚌</span>
+            <span class="calculator__transport-text">Ônibus</span>
+          </label>
+
+          <label class="calculator__transport-option">
+            <input type="radio" name="transport" value="truck" class="calculator__transport-input" id="transport-truck" />
+            <span class="calculator__transport-icon">🚚</span>
+            <span class="calculator__transport-text">Caminhão</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="calculator__actions">
+        <button type="submit" class="calculator__btn">Calcular Emissão</button>
+      </div>
+    </form>
+
+    <!-- Seções de resultado (inicialmente ocultas) -->
+    <section id="results" class="calculator__results hidden" aria-hidden="true">
+      <div id="results-content" class="calculator__results-content" role="region" aria-live="polite"></div>
+    </section>
+
+    <section id="comparison" class="calculator__comparison hidden" aria-hidden="true">
+      <div id="comparison-content" class="calculator__comparison-content" role="region"></div>
+    </section>
+
+    <section id="carbon-credits" class="calculator__carbon-credits hidden" aria-hidden="true">
+      <div id="carbon-credits-content" class="calculator__carbon-credits-content" role="region"></div>
+    </section>
+  </main>
+
+  <footer class="calculator__footer">
+    <p class="calculator__credits">Desenvolvido por Danilooliveira1</p>
+  </footer>
+
+  <!-- Scripts (ordem respeitada) -->
+  <script src="js/routes-data.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/ul.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
