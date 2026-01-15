@@ -37,6 +37,7 @@ O projeto foi construído seguindo os princípios da **Web Standard**, sem depen
 Para que o projeto funcione corretamente, organize os arquivos nas pastas conforme a árvore abaixo:
 
 ```text
+/
 ├── index.html          # Página principal
 ├── css/
 │   └── style.css       # Folha de estilos
