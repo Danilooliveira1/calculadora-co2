@@ -2,7 +2,7 @@
 
 Uma aplicação web interativa e responsiva projetada para calcular a pegada de carbono de diferentes trajetos e modos de transporte. O projeto visa conscientizar sobre o impacto ambiental dos deslocamentos, oferecendo comparativos visuais e estimativas de compensação via créditos de carbono.
 
-> **Nota:** Este projeto foi desenvolvido utilizando a metodologia *vibecode* com auxílio do GitHub Copilot para aceleração do desenvolvimento e sugestão de estilos.
+> **Nota:** Este projeto foi desenvolvido utilizando a metodologia *Vibe Coding* com auxílio do GitHub Copilot para aceleração do desenvolvimento e sugestão de estilos.
 
 ## ✨ Funcionalidades
 
@@ -37,7 +37,6 @@ O projeto foi construído seguindo os princípios da **Web Standard**, sem depen
 Para que o projeto funcione corretamente, organize os arquivos nas pastas conforme a árvore abaixo:
 
 ```text
-/
 ├── index.html          # Página principal
 ├── css/
 │   └── style.css       # Folha de estilos
@@ -47,14 +46,14 @@ Para que o projeto funcione corretamente, organize os arquivos nas pastas confor
     ├── calculator.js   # Lógica de cálculo de emissão e finanças
     ├── ul.js           # Lógica de Interface (UI) e renderização
     └── app.js          # Controlador principal e eventos
-
+```
 ## 🚀 Como Executar
 
 Como este é um projeto estático (*front-end* puro), não é necessária a instalação de dependências ou configuração de servidores complexos.
 
 1.  **Baixe ou Clone o repositório:**
     ```bash
-    git clone [https://github.com/Danilooliveira1/calculadora-co2.git]
+    git clone https://github.com/Danilooliveira1/calculadora-co2.git
     ```
 
 2.  **Verifique a organização das pastas:**
@@ -90,6 +89,6 @@ A interface foi construída com CSS puro (sem frameworks), utilizando a metodolo
 
 ---
 
-> *Projeto criado para fins de estudo e conscientização ambiental*
->
-> **Desenvolvido por Danilooliveira1**
+*Projeto criado para fins de estudo e conscientização ambiental*
+
+**Desenvolvido por Danilooliveira1**
